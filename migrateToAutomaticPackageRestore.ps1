@@ -1,3 +1,4 @@
+$tfexe = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Ide\TF.exe'
 ########################################
 # Regex Patterns for Really Bad Things!
 $listOfBadStuff = @(
@@ -30,6 +31,7 @@ ls -Recurse -include *.csproj, *.sln, *.fsproj, *.vbproj, *.wixproj |
     }
     if ($origContent -ne $content)
     {	
+	& $tfexe "checkout" $_.FullName
         $content | out-file -encoding "UTF8" $_.FullName
         write-host messed with $_.Name
     }		    
