@@ -1,3 +1,6 @@
+# Sajan's Changes
+  - Checkout files before modifying them.
+
 # Owen's bag of nuget related scripts!
 
 ## migrateToAutomaticPackageRestore.ps1
